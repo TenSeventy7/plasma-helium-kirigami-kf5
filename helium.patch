@@ -1,22 +1,13 @@
-diff --git a/src/controls/Units.qml b/src/controls/Units.qml
-index a7b2fc3..f5ed4ce 100644
---- a/src/controls/Units.qml
-+++ b/src/controls/Units.qml
-@@ -66,7 +66,7 @@ QtObject {
-      * the default font as rendered on the screen, so it takes user-configured font size and DPI
-      * into account.
-      */
--    property int smallSpacing: gridUnit/4
-+    property int smallSpacing: gridUnit/2
- 
-     /**
-      * units.largeSpacing is the amount of spacing that should be used inside bigger UI elements,
-@@ -74,7 +74,7 @@ QtObject {
-      * the size of the default font as rendered on the screen, so it takes user-configured font
-      * size and DPI into account.
-      */
--    property int largeSpacing: gridUnit
-+    property int largeSpacing: gridUnit*2
- 
-     /**
-      * The ratio between physical and device-independent pixels. This value does not depend on the \
+diff --git a/src/libkirigami/units.cpp b/src/libkirigami/units.cpp
+index e7c0a31..6b78788 100644
+--- a/src/libkirigami/units.cpp
++++ b/src/libkirigami/units.cpp
+@@ -68,7 +68,7 @@ public:
+         // Cache font so we don't have to go through QVariant and property every time
+         , fontMetrics(QFontMetricsF(QGuiApplication::font()))
+         , gridUnit(fontMetrics.height())
+-        , smallSpacing(std::floor(gridUnit / 4))
++        , smallSpacing(std::floor(gridUnit / 2))
+         , mediumSpacing(std::round(smallSpacing * 1.5))
+         , largeSpacing(smallSpacing * 2)
+         , veryLongDuration(400)
