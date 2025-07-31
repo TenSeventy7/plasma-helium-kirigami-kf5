@@ -19,7 +19,7 @@ URL:     https://techbase.kde.org/Kirigami
 
 %global majmin 5.116
 %global stable %stable_kf5
-Source0: http://download.kde.org/stable/frameworks/%{majmin}/%{framework}-%{version}.tar.xz
+Source0: https://download.kde.org/stable/frameworks/%{majmin}/%{framework}-%{version}.tar.xz
 
 Source10: helium.patch
 
