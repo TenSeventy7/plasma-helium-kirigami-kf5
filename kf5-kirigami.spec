@@ -10,7 +10,7 @@
 
 Name:    kf5-%{framework}
 Version: 1.1.0
-Release: 35%{?dist}
+Release: 35.1%{?dist}
 Summary: QtQuick plugins to build user interfaces based on the KDE UX guidelines
 
 # Automatically converted from old format: LGPLv2+ - review is highly recommended.
@@ -19,7 +19,7 @@ License: LicenseRef-Callaway-LGPLv2+
 URL:     https://techbase.kde.org/Kirigami
 Source0: https://download.kde.org/stable/kirigami/%{framework}-%{version}.tar.xz
 
-Source10:       helium.patch
+Patch10:       helium.patch
 
 # filter qml provides
 %global __provides_exclude_from ^%{_kf5_qmldir}/.*\\.so$
