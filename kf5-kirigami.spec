@@ -17,7 +17,7 @@ Summary: QtQuick plugins to build user interfaces based on the KDE UX guidelines
 License: LicenseRef-Callaway-LGPLv2+
 #URL:    https://quickgit.kde.org/?p=%{framework}.git
 URL:     https://techbase.kde.org/Kirigami
-Source0: http://download.kde.org/stable/kirigami/%{framework}-%{version}.tar.xz
+Source0: https://download.kde.org/stable/kirigami/%{framework}-%{version}.tar.xz
 
 Source10:       helium.patch
 
